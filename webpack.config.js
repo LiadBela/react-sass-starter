@@ -5,7 +5,7 @@ const path = require('path');
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
   SRC: path.resolve(__dirname, 'src'),
-  JS: path.resolve(__dirname, 'src/js'),
+  // JS: path.resolve(__dirname, 'src'),
 };
 
 const htmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,7 +13,7 @@ const extractTextPlugin = require('extract-text-webpack-plugin');
 
 // Webpack configuration
 module.exports = {
-  entry: path.join(paths.JS, 'app.js'),
+  entry: path.join(paths.SRC, 'index.js'),
   output: {
     path: paths.DIST,
     filename: 'app.bundle.js'
